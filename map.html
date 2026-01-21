@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Geo-Sustain — Live Map</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><a href="index.html">Geo-Sustain</a></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="map.html" class="active">Live Map</a>
+      <a href="eco-route.html">Eco-Routing</a>
+      <a href="prediction.html">Prediction</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="toggle menu">☰</button>
+  </header>
+
+  <main class="map-page">
+    <aside class="sidebar-left">
+      <h4>Layers</h4>
+      <label><input type="checkbox" checked id="layerTraffic"> Traffic</label>
+      <label><input type="checkbox" checked id="layerAQI"> AQI Heatmap</label>
+      <label><input type="checkbox" checked id="layerPrediction"> Predicted Hotspots</label>
+      <hr />
+      <h4>Controls</h4>
+      <button id="btnEcoRoute" class="small">Find Eco Route</button>
+      <div class="small muted">Search: <input id="mapSearch" placeholder="address or coordinates" /></div>
+    </aside>
+
+    <section class="map-area">
+      <!-- Place where TomTom / Map SDK will be mounted -->
+      <div id="map" class="map-canvas">Loading map…</div>
+    </section>
+
+    <aside class="insights-right">
+      <h4>Area Insights</h4>
+      <div class="insight-card">
+        <strong>AQI</strong>
+        <div id="insightAQI">—</div>
+      </div>
+      <div class="insight-card">
+        <strong>Avg Speed</strong>
+        <div id="insightSpeed">— km/h</div>
+      </div>
+      <div class="insight-card">
+        <strong>Incidents</strong>
+        <ul id="insightIncidents" class="muted"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Geo-Sustain</div>
+  </footer>
+
+  <!-- map.js contains placeholders and example fetch code -->
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
