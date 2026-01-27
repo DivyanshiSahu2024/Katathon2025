@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Geo-Sustain — Prediction</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><a href="index.html">Geo-Sustain</a></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="map.html">Live Map</a>
+      <a href="prediction.html" class="active">Prediction</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+    <button class="nav-toggle" aria-label="toggle menu">☰</button>
+  </header>
+
+  <main class="section">
+    <h2 class="center">Pollution Forecast</h2>
+
+    <div class="forecast-controls">
+      <label><input type="radio" name="horizon" value="1" checked> 1 hour</label>
+      <label><input type="radio" name="horizon" value="3"> 3 hours</label>
+      <label><input type="radio" name="horizon" value="6"> 6 hours</label>
+    </div>
+
+    <div class="forecast-grid">
+      <div class="forecast-map map-preview">
+        <div class="map-placeholder">
+          <p>Prediction heatmap placeholder</p>
+        </div>
+      </div>
+
+      <div class="forecast-charts">
+        <div class="card">
+          <h4>AQI Timeline</h4>
+          <div id="aqiTimeline">(chart placeholder)</div>
+        </div>
+        <div class="card">
+          <h4>Model Inputs</h4>
+          <ul>
+            <li>Traffic speeds</li>
+            <li>Weather</li>
+            <li>AQI history</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">© Geo-Sustain</footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
